@@ -23,6 +23,7 @@ const Home = () => {
       }
       socket.emit("join", { name: context?.name });
       navigate("game");
+      socket.emit("find", {});
     },
     [socket, context?.name, navigate]
   );

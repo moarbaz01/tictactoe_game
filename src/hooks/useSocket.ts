@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
 import { io } from "socket.io-client";
 import { useState } from "react";
 
@@ -9,6 +9,7 @@ function useSocket() {
   useEffect(() => {
     socket.on("connect", () => {
       setSocketId(socket.id ?? null);
+      console.log("Socket id : ", socket.id)
     });
   }, [socket]);
   return { socket, socketId };

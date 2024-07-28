@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 
 const Searching = () => {
@@ -21,7 +21,7 @@ const Searching = () => {
         <span style={{ color: "yellow", fontSize: "5rem", padding: "0 20px" }}>
           vs
         </span>{" "}
-        {context?.loading ? "finding...." : context?.opponentName}
+        {context?.loading ? "finding...." : context?.opponent}
       </div>
     </div>
   );
